@@ -1,22 +1,27 @@
 package = "lua-resty-busted"
-version = "0.0.1-0"
+version = "master-0"
 source = {
-  url = "git://github.com/thibaultCha/lua-resty-busted",
-  tag = "0.0.1"
+  url = "git://github.com/saucisson/lua-resty-busted",
 }
+
 dependencies = {
-  "busted ~> 2.0.rc12"
+  "busted",
+  "luacheck",
 }
+
 description = {
-  summary = "",
-  license = "MIT"
+  summary = "Test OpenResty scripts with busted",
+  license = "MIT",
 }
+
 build = {
-  type = "make",
-  build_pass = false,
-  build_variables = {
-    PREFIX = "$(PREFIX)",
-    INSTALL_DIR = "$(INSTALL_DIR)",
-    CFLAGS = "$(CFLAGS)"
-  }
+  type    = "builtin",
+  modules = {
+    ["resty.busted"] = "src/resty_busted.lua",
+  },
+  install = {
+    bin = {
+      ["resty_busted"] = "src/resty_busted.sh",
+    },
+  },
 }
