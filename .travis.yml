@@ -1,0 +1,16 @@
+sudo: required
+services:
+  - docker
+addons:
+  apt:
+    packages:
+    - shellcheck
+language: python
+script:
+  - shellcheck src/*.sh
+  - docker build .
+notifications:
+  email:
+    - alban.linard@gmail.com
+  on_success: change
+  on_failure: change
