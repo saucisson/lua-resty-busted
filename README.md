@@ -1,4 +1,6 @@
-# lua-resty-busted ![Module Version][badge-version-image]
+[![Build Status](https://travis-ci.org/saucisson/lua-resty-busted.svg?branch=master)](https://travis-ci.org/saucisson/lua-resty-busted)
+
+# lua-resty-busted
 
 A little hack to test OpenResty scripts with [busted].
 
