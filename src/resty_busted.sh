@@ -6,4 +6,4 @@ do
   export LUA_RESTY_BUSTED_ARG_${count}="${arg}"
   count=$((count = count + 1))
 done
-resty -e 'local rb = require "resty.busted"; rb ()'
+resty -e 'local busted = require "resty.busted"; busted ()'
