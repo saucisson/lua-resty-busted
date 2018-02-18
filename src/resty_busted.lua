@@ -8,7 +8,7 @@ _G.arg = {}
 local i = 0
 repeat
   i = i + 1
-  _G.arg [i] = os.getenv ("ARG_" .. tostring (i))
+  _G.arg [i] = os.getenv ("LUA_RESTY_BUSTED_ARG_" .. tostring (i))
 until not _G.arg [i]
 
 return function ()
