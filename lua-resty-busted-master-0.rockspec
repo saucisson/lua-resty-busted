@@ -1,7 +1,8 @@
 package = "lua-resty-busted"
 version = "master-0"
 source = {
-  url = "git://github.com/saucisson/lua-resty-busted",
+  url    = "git://github.com/saucisson/lua-resty-busted",
+  branch = "master",
 }
 
 dependencies = {
